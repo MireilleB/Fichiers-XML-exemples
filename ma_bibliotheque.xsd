@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:element name="bibliotheque">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="magazine">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titre" type="xs:string"/>
+                            <xs:element name="dateparution" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="roman">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titre" type="xs:string"/>
+                            <xs:element name="auteur" type="xs:string"/>
+                            <xs:element name="prix" type="xs:integer"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+<!-- Je définie que BIBLIOTHEQUE peut contenir au choix (xs:choice) un nombre quelquonque (maxOccurs="unbounded") d'élements ROMAN et MAGAZINE.
+Chaque MAGAZINE comprend obligatoirement une séquence (xs:sequence) de deux éléments: un TITRE et une DATEPARUTION.
+La DATEPARUTION contient obligatoirement une date (type="xs:date", format année-mois-jour) -->

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bibliotheque xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ma_bibliotheque.xsd">
+	<roman>
+		<titre>Imajica</titre>
+		<auteur>Clive Barker</auteur>
+		<prix>6</prix>
+		
+	</roman>
+	<roman>
+		<titre>Dune</titre>
+		<auteur>Frank Herbert</auteur>
+		<prix>7</prix>
+	</roman>
+	<magazine>
+		<titre>Science et Vie</titre>
+		<dateparution>2019-02-01</dateparution>
+	</magazine>
+	<roman>
+		<titre>Christine</titre>
+		<auteur>Stephen King</auteur>
+		<prix>5</prix>
+	</roman>
+</bibliotheque>

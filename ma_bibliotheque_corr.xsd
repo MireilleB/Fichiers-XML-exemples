@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified" 
+           attributeFormDefault="unqualified">
+           
+    <xs:element name="bibliotheque">
+        <xs:complexType>
+            <!-- Schéma complet avec les contraintes appliquées -->
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="roman" maxOccurs="10">  <!-- Contrainte 2 : Maximum 10 romans -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titre" type="xs:string"/>
+                            
+                            <!-- Contrainte 4 : Auteur min 2 caractères -->
+                            <xs:element name="auteur">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:minLength value="2"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Contrainte 1 : Prix minimum 1 -->
+                            <xs:element name="prix">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="magazine">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titre" type="xs:string"/>
+                            <xs:element name="dateparution" type="xs:date"/>
+                            <!-- Contrainte 3 : numéro optionnel -->
+                            <xs:element name="numero" type="xs:integer" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
