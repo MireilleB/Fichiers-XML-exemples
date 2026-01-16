@@ -97,7 +97,7 @@ Ce sont deux namespaces différents, avec deux rôles distincts.
 | `xs:element` | Élément | `<xs:element name="titre" type="xs:string"/>` |
 | `xs:complexType` | Structure complexe | `<xs:complexType><xs:sequence>...</xs:sequence></xs:complexType>` |
 | `xs:sequence` | Ordre strict | Enfants dans l'ordre |
-| `xs:choice` | Choix exclusif | Un seul des choix |
+| `xs:choice` | Choix exclusif | Une option parmi les choix |
 | `xs:all` | Ordre libre | Enfants dans n'importe quel ordre |
 ---
 
