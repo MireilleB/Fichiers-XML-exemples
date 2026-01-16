@@ -5,7 +5,6 @@
 		<titre>Imajica</titre>
 		<auteur>Clive Barker</auteur>
 		<prix>6</prix>
-		
 	</roman>
 	<roman>
 		<titre>Dune</titre>
@@ -22,3 +21,4 @@
 		<prix>5</prix>
 	</roman>
 </bibliotheque>
+
