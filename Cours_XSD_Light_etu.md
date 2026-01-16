@@ -200,7 +200,7 @@ La DATEPARUTION contient obligatoirement une date (type="xs:date", format année
 | Opérateur XSD                         | Équivalent DTD | Exemple             | Signification |
 |:--------------------------------------|:---------------|:--------------------| :-- |
 | `xs:sequence`                         | `,`            | `titre,auteur,prix` | Ordre strict |
-| `xs:choice`                           | `(A\|B)`       | `(roman\|magazine)` | Choix exclusif |
+| `xs:choice`                           | `(A\|B)`       | `(roman\|magazine)` | Un seul élément par occurrence |
 | `xs:all`                              | ` (pas d'équivalent exact)`       |          | Tous éléments requis, ordre libre |
 | `minOccurs="0"`                       | `?`            | Optionnel           | 0 ou 1 |
 | `minOccurs="0" maxOccurs="unbounded"` | `*`            | 0 ou plus           | Zéro ou plus |
