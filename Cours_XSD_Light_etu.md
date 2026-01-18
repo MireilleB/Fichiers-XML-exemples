@@ -258,6 +258,13 @@ Voici les modifications à apporter (à intégrer dans la structure existante du
 <xs:element name="numero" type="xs:integer" minOccurs="0"/>
 ```
 ---
+
+## Astuce
+
+🔥XmlCopyEditor permet de générer automatiquement un xsd ou une DTD depuis un XML donné (menu 'outils')
+ Vous pouvez ensuite le personnaliser en fonction de vos besoins et contraintes propres...
+ 
+---
 ## Sources Officielles
 
 ### 📖 W3C (Normes)
