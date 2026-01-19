@@ -25,7 +25,7 @@
 **Windows :**
 
 1. Ouvrez votre navigateur web
-2. Allez sur : `https://code.visualstudio.com/`
+2. Allez sur : `https://code.visualstudio.com/download`
 3. La page détecte automatiquement votre système d'exploitation
 4. Cliquez sur le grand bouton bleu **"Download for Windows"**
 5. Le fichier `VSCodeUserSetup-x64-1.xx.x.exe` se télécharge
@@ -94,14 +94,13 @@ VSCode s'ouvre. Vous voyez :
 
 ---
 
-### Étape 2.2 : Installer "XML" (Red Hat)
+### Étape 2.2 : Installer "XML Tools"
 
-1. Dans la barre de recherche des extensions, tapez : `XML`
-2. La première extension qui apparaît devrait être **"XML"** avec :
-   - Nom : **XML**
-   - Auteur : **Red Hat**
-   - Logo : Un logo rouge avec "RH"
-   - Description : "XML Language Support..."
+1. Dans la barre de recherche des extensions, tapez : `XML Tools`
+2. Trouvez **"XML Tools"** avec :
+   - Nom : **XML Tools**
+   - Auteur : **Josh Johnson**
+   - Description : "XML Formatting, XQuery, and XPath Tools for Visual Studio Code"
 
 3. Cliquez sur cette extension
 4. Un panneau de détails s'ouvre à droite
@@ -109,7 +108,9 @@ VSCode s'ouvre. Vous voyez :
 6. Attendez quelques secondes
 7. Le bouton devient **"Disable"** (Désactiver) - c'est normal, l'extension est installée !
 
-> **⚠️ Erreur courante :** Si vous ne voyez pas l'extension Red Hat, vérifiez que vous avez bien tapé "XML" dans la recherche et qu'internet fonctionne
+> **💡 Pourquoi cette extension ?** XML Tools gère tout ce dont vous avez besoin : validation XML, formatage, XPath ET transformations XSLT, le tout avec une configuration ultra-simple !
+
+> **⚠️ Erreur courante :** Si vous ne voyez pas l'extension, vérifiez que vous avez bien tapé "XML Tools" dans la recherche et qu'internet fonctionne
 
 ---
 
@@ -134,29 +135,13 @@ VSCode s'ouvre. Vous voyez :
 
 ---
 
-### Étape 2.4 : Installer "XSLT/XPath for VS Code"
-
-1. Dans la barre de recherche, tapez : `XSLT XPath`
-2. Trouvez **"XSLT/XPath for VS Code"**
-   - Auteur : **DeltaXML**
-   - Logo : Logo DeltaXML (triangle)
-   - Description : "XSLT and XPath language..."
-
-3. Cliquez dessus puis sur **"Installer"** (Install)
-4. Attendez l'installation
-
-> **⚠️ Faites attention à :** Bien installer la version de **DeltaXML**, pas une autre extension XSLT
-
----
-
-### Étape 2.5 : Vérifier les extensions installées
+### Étape 2.4 : Vérifier les extensions installées
 
 1. Dans le panneau Extensions (toujours ouvert)
 2. En haut de la barre de recherche, effacez votre recherche
 3. Vous voyez maintenant vos extensions installées :
-   - ✅ XML (Red Hat)
+   - ✅ XML Tools (Josh Johnson)
    - ✅ French Language Pack for Visual Studio Code (si installé)
-   - ✅ XSLT/XPath for VS Code (DeltaXML)
 
 > **💡 Astuce :** Vous pouvez désactiver temporairement une extension avec le bouton "Désactiver" si besoin
 
@@ -282,10 +267,10 @@ OpenJDK Runtime Environment Zulu...
 2. Allez sur : `https://www.saxonica.com/download/java.xml`
 3. Sur la page, cherchez la section **"Saxon-HE"** (Home Edition)
 4. Cliquez sur le lien de téléchargement pour la dernière version
-   - Par exemple : **"Saxon-HE 12.5"**
+   - Par exemple : **"Saxon-HE 12.9"**
 
 5. Vous arrivez sur SourceForge
-6. Le téléchargement du fichier **`SaxonHE12-5J.zip`** commence automatiquement
+6. Le téléchargement du fichier **`SaxonHE12-9J.zip`** commence automatiquement
 7. Si ce n'est pas le cas, cliquez sur le bouton vert **"Download"**
 
 > **💡 Astuce :** Saxon fonctionne de la même façon sur Windows et Mac (c'est un fichier Java)
@@ -297,13 +282,13 @@ OpenJDK Runtime Environment Zulu...
 **Windows et Mac (même procédure) :**
 
 1. Allez dans votre dossier Téléchargements
-2. Trouvez le fichier `SaxonHE12-5J.zip`
+2. Trouvez le fichier `SaxonHE12-9J.zip`
 3. **Décompressez-le** (clic droit → Extraire)
 4. Dans le dossier décompressé, vous trouvez plusieurs fichiers
-5. **Cherchez le fichier** : `saxon-he-12.5.jar`
+5. **Cherchez le fichier** : `saxon-he-12.9.jar`
 6. **Copiez ce fichier** dans un endroit simple :
-   - Windows : `C:\Outils\saxon-he-12.5.jar`
-   - Mac : `/Users/votrenom/Outils/saxon-he-12.5.jar`
+   - Windows : `C:\Outils\saxon-he-12.9.jar`
+   - Mac : `/Users/votrenom/Outils/saxon-he-12.9.jar`
 
 > **⚠️ Faites attention à :** Ne prenez QUE le fichier `.jar`, pas tout le dossier. Saxon est un fichier unique !
 
@@ -316,14 +301,14 @@ OpenJDK Runtime Environment Zulu...
 1. Dans le terminal VSCode (en bas), tapez :
 
 ```bash
-C:\Outils\jdk17\bin\java.exe -jar C:\Outils\saxon-he-12.5.jar
+C:\Outils\jdk17\bin\java.exe -jar C:\Outils\saxon-he-12.9.jar
 ```
 
 2. Appuyez sur **Entrée**
 3. Vous devez voir s'afficher des informations sur Saxon :
 
 ```
-Saxon-HE 12.5 from Saxonica
+Saxon-HE 12.9 from Saxonica
 Usage: see http://www.saxonica.com/documentation/...
 ```
 
@@ -336,7 +321,7 @@ Usage: see http://www.saxonica.com/documentation/...
 Même commande en adaptant les chemins :
 
 ```bash
-/Users/votrenom/Outils/jdk17/bin/java -jar /Users/votrenom/Outils/saxon-he-12.5.jar
+/Users/votrenom/Outils/jdk17/bin/java -jar /Users/votrenom/Outils/saxon-he-12.9.jar
 ```
 
 ---
@@ -384,38 +369,67 @@ Le fichier s'ouvre dans l'éditeur (au centre).
 5. **Copiez-collez** ce contenu COMPLET (en ADAPTANT les chemins selon votre installation) :
 
 **Pour Windows :**
-
 ```json
 {
-  "xml.validation.enabled": true,
-  "xml.format.enabled": true,
-  "xml.format.splitAttributes": false,
-  
-  "XSLT.tasks.saxonJar": "C:/Outils/saxon-he-12.5.jar",
-  "XSLT.tasks.javaExecutablePath": "C:/Outils/jdk17/bin/java.exe"
+  "java.home": "C:/Outils/jdk17",
+  "saxon.jar.path": "C:/Outils/saxon-he-12.9.jar"
 }
 ```
 
 **Pour Mac :**
-
 ```json
 {
-  "xml.validation.enabled": true,
-  "xml.format.enabled": true,
-  "xml.format.splitAttributes": false,
-  
-  "XSLT.tasks.saxonJar": "/Users/votrenom/Outils/saxon-he-12.5.jar",
-  "XSLT.tasks.javaExecutablePath": "/Users/votrenom/Outils/jdk17/bin/java"
+  "java.home": "/Users/votrenom/Outils/jdk17",
+  "saxon.jar.path": "/Users/votrenom/Outils/saxon-he-12.9.jar"
 }
 ```
 
 6. **Sauvegardez** : `Ctrl+S` (Windows) ou `Cmd+S` (Mac)
 
 > **⚠️ TRÈS IMPORTANT :**
-> - Remplacez `votrenom` par votre vrai nom d'utilisateur
+> - Remplacez `votrenom` par votre vrai nom d'utilisateur (Mac uniquement)
 > - Vérifiez que les chemins correspondent à VOS dossiers
 > - Pour Windows, utilisez des `/` (slashes) pas des `\` (backslashes)
 > - Vérifiez les guillemets : `"` (pas `'`)
+> - Le chemin `java.home` pointe vers le **dossier** JDK (pas vers java.exe)
+
+> **💡 Configuration ultra-simple !** Seulement 2 lignes suffisent avec l'extension XML Tools. C'est tout ce dont vous avez besoin pour faire fonctionner les transformations XSLT.
+
+---
+
+### ⚠️ Configuration spéciale pour disques externes/portables avec WINDOWS
+
+**Si votre projet ou VSCode est sur un disque externe (D:, E:, G:, clé USB, SSD portable) :**
+
+Il pourrait (ou pas !) y avoir des problèmes de permissions avec PowerShell. Ajoutez cette configuration au début de votre `settings.json` :
+
+**Pour Windows avec disque externe :**
+```json
+{
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "_comment": "chemin path à adapter ci dessous",
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  
+  "java.home": "G:/Outils/jdk17",
+  "saxon.jar.path": "G:/Outils/saxon-he-12.9.jar"
+}
+```
+
+> **💡 Astuce :** Remplacez `G:/` par la lettre de VOTRE disque (D:, E:, F:, etc.)
+
+**Et lancez VSCode en mode administrateur :**
+1. Clic droit sur le raccourci VSCode → **Propriétés**
+2. Onglet **"Compatibilité"**
+3. Cochez **"Exécuter ce programme en tant qu'administrateur"**
+4. Cliquez sur **OK**
+
+> **⚠️ Pourquoi ?** Les disques externes ont parfois des restrictions de permissions. Cette configuration + le mode administrateur résolvent ces problèmes.
 
 ---
 
@@ -429,7 +443,6 @@ Le fichier s'ouvre dans l'éditeur (au centre).
 Le fichier s'ouvre.
 
 5. **Copiez-collez** ce contenu COMPLET :
-
 ```json
 {
   "version": "2.0.0",
@@ -437,10 +450,10 @@ Le fichier s'ouvre.
     {
       "label": "Transformer XML vers HTML",
       "type": "shell",
-      "command": "${config:XSLT.tasks.javaExecutablePath}",
+      "command": "${config:java.home}/bin/java",
       "args": [
         "-jar",
-        "${config:XSLT.tasks.saxonJar}",
+        "${config:saxon.jar.path}",
         "-s:${file}",
         "-xsl:${input:xslFile}",
         "-o:${fileDirname}/${fileBasenameNoExtension}_resultat.html"
@@ -470,6 +483,11 @@ Le fichier s'ouvre.
 6. **Sauvegardez** : `Ctrl+S` ou `Cmd+S`
 
 > **💡 Ce que fait ce fichier :** Il configure une tâche qui vous permettra de transformer vos fichiers XML en HTML d'un simple raccourci clavier !
+
+> **🔍 Notez les différences :**
+> - La commande utilise `${config:java.home}/bin/java` (qui récupère le chemin depuis settings.json)
+> - Les arguments utilisent `${config:saxon.jar.path}` (pareil)
+> - C'est pour ça que la configuration est si simple !
 
 ---
 
