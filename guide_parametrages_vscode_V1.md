@@ -1,9 +1,9 @@
 # Guide pas-à-pas : Installation et configuration VSCode pour XML/XSLT
 ## L3  information-documentation
 
-> **Durée estimée :** 45-60 minutes  
-> **Niveau :** Débutant  
-> **Systèmes :** Windows / Mac
+> **⏳ Durée estimée :** 45-60 minutes  
+> **🟢 Niveau :** Débutant  
+> **Systèmes :** 🪟 Windows / 🍎 Mac
 
 ---
 
@@ -22,19 +22,19 @@
 
 ### Étape 1.1 : Télécharger VSCode
 
-**Windows :**
+**🪟 Windows :**
 
 1. Ouvrez votre navigateur web
-2. Allez sur : `https://code.visualstudio.com/download`
+2. Allez sur : `https://code.visualstudio.com/download` [🌐](https://code.visualstudio.com/download)
 3. La page détecte automatiquement votre système d'exploitation
 4. Cliquez sur le grand bouton bleu **"Download for Windows"**
 5. Le fichier `VSCodeUserSetup-x64-1.xx.x.exe` se télécharge
 
 > **💡 Astuce :** Si vous préférez une version portable (sans installation), cliquez sur "Other downloads" et choisissez le fichier `.zip`
 
-**Mac :**
+**🍎 Mac :**
 
-1. Même site : `https://code.visualstudio.com/`
+1. Même site : `https://code.visualstudio.com/download` [🌐](https://code.visualstudio.com/download)
 2. Cliquez sur **"Download for Mac"**
 3. Le fichier `VSCode-darwin-universal.zip` se télécharge
 
@@ -42,7 +42,7 @@
 
 ### Étape 1.2 : Installer VSCode
 
-**Windows :**
+**🪟 Windows :**
 
 1. Double-cliquez sur le fichier téléchargé `VSCodeUserSetup-x64-x.xx.x.exe`
 2. Une fenêtre de sécurité Windows peut apparaître : cliquez sur **"Oui"**
@@ -57,7 +57,7 @@
 
 > **⚠️ Faites attention à :** Bien cocher "Ajouter à PATH" - c'est essentiel pour que VSCode fonctionne correctement
 
-**Mac :**
+**🍎 Mac :**
 
 1. Ouvrez le fichier `.zip` téléchargé (il se décompresse automatiquement)
 2. Glissez l'icône **"Visual Studio Code"** dans le dossier **Applications**
@@ -75,7 +75,7 @@ VSCode s'ouvre. Vous voyez :
 2. **Au centre :** Une page d'accueil avec "Get Started" et des raccourcis
 3. **En bas :** Une barre bleue (barre d'état)
 
-> **💡 Astuce :** Si l'interface est en anglais et que vous voulez le français, cf. Partie 2, Étape 2.3
+> **💡 Astuce :** Si l'interface est en anglais et que vous voulez le français, cf. [Partie 2, Étape 2.3]
 
 ---
 
@@ -151,10 +151,10 @@ VSCode s'ouvre. Vous voyez :
 
 ### Étape 3.1 : Télécharger Zulu JDK
 
-**Windows :**
+**🪟 Windows :**
 
 1. Ouvrez votre navigateur
-2. Allez sur : `https://www.azul.com/downloads/?package=jdk`
+2. Allez sur : `https://www.azul.com/downloads/?package=jdk` [🌐](https://www.azul.com/downloads/?package=jdk)
 3. Sur la page, configurez les filtres :
    - **Java Version :** Sélectionnez **Java 17 (LTS)**
    - **Operating System :** Sélectionnez **Windows**
@@ -168,9 +168,9 @@ VSCode s'ouvre. Vous voyez :
 
 > **⚠️ Faites attention à :** Bien télécharger le fichier **.zip** (version portable), pas le .msi
 
-**Mac :**
+**🍎 Mac :**
 
-1. Même site : `https://www.azul.com/downloads/?package=jdk`
+1. Même site : `https://www.azul.com/downloads/?package=jdk` [🌐](https://www.azul.com/downloads/?package=jdk)
 2. Configurez les filtres :
    - **Java Version :** **Java 17 (LTS)**
    - **Operating System :** **macOS**
@@ -183,7 +183,7 @@ VSCode s'ouvre. Vous voyez :
 
 ### Étape 3.2 : Installer Java
 
-**Windows :**
+**🪟 Windows :**
 
 1. Allez dans votre dossier Téléchargements
 2. Trouvez le fichier `zulu17.xx.xx-ca-jdk17.x.x-win_x64.zip`
@@ -201,7 +201,11 @@ VSCode s'ouvre. Vous voyez :
 - Avant : `C:\Outils\zulu17.52.17-ca-jdk17.0.12-win_x64`
 - Après : `C:\Outils\jdk17`
 
-**Mac :**
+> **💡 Alternative :** Vous pouvez aussi garder le nom complet (ex: `zulu-jdk17.0.17`) pour suivre précisément la version installée. Dans ce cas, utilisez ce nom exact dans votre `settings.json` :
+> ```json
+> "java.home": "C:/Outils/zulu-jdk17.0.17"
+> ```
+**🍎 Mac :**
 
 1. Si fichier **.dmg** :
    - Double-cliquez dessus
@@ -217,7 +221,7 @@ VSCode s'ouvre. Vous voyez :
 
 ### Étape 3.3 : Vérifier l'installation de Java
 
-**Windows :**
+**🪟 Windows :**
 
 1. Dans VSCode, ouvrez un terminal :
    - Menu **"Terminal"** → **"Nouveau terminal"**
@@ -240,7 +244,7 @@ OpenJDK Runtime Environment Zulu...
 
 > **⚠️ Erreur courante :** Si vous voyez "java n'est pas reconnu...", vérifiez le chemin. Utilisez l'explorateur Windows pour confirmer que `java.exe` existe bien dans le dossier `bin`
 
-**Mac :**
+**🍎 Mac :**
 
 1. Ouvrez le Terminal dans VSCode (même méthode)
 2. Tapez :
@@ -264,7 +268,7 @@ OpenJDK Runtime Environment Zulu...
 ### Étape 4.1 : Télécharger Saxon
 
 1. Ouvrez votre navigateur
-2. Allez sur : `https://www.saxonica.com/download/java.xml`
+2. `https://www.saxonica.com/download/java.xml` [🌐](https://www.saxonica.com/download/java.xml)
 3. Sur la page, cherchez la section **"Saxon-HE"** (Home Edition)
 4. Cliquez sur le lien de téléchargement pour la dernière version
    - Par exemple : **"Saxon-HE 12.9"**
@@ -279,7 +283,7 @@ OpenJDK Runtime Environment Zulu...
 
 ### Étape 4.2 : Installer Saxon
 
-**Windows et Mac (même procédure) :**
+**🪟 Windows et 🍎 Mac (même procédure) :**
 
 1. Allez dans votre dossier Téléchargements
 2. Trouvez le fichier `SaxonHE12-9J.zip`
@@ -289,6 +293,15 @@ OpenJDK Runtime Environment Zulu...
 6. **Copiez ce fichier** dans un endroit simple :
    - Windows : `C:\Outils\saxon-he-12.9.jar`
    - Mac : `/Users/votrenom/Outils/saxon-he-12.9.jar`
+> **💡 Organisation alternative :**
+> Vous pouvez aussi créer un sous-dossier pour mieux organiser vos outils :
+> - 🪟 Windows : `C:\Outils\SaxonHE12-9J\saxon-he-12.9.jar`
+> - 🍎 Mac : `/Users/votrenom/Outils/SaxonHE12-9J/saxon-he-12.9.jar`
+>
+> Dans ce cas, utilisez le chemin complet dans `settings.json` :
+> ```json
+> "saxon.jar.path": "C:/Outils/SaxonHE12-9J/saxon-he-12.9.jar"
+> ```
 
 > **⚠️ Faites attention à :** Ne prenez QUE le fichier `.jar`, pas tout le dossier. Saxon est un fichier unique !
 
@@ -296,7 +309,7 @@ OpenJDK Runtime Environment Zulu...
 
 ### Étape 4.3 : Vérifier Saxon
 
-**Windows :**
+**🪟 Windows :**
 
 1. Dans le terminal VSCode (en bas), tapez :
 
@@ -316,7 +329,7 @@ Usage: see http://www.saxonica.com/documentation/...
 
 > **⚠️ Erreur courante :** Si vous voyez "Error: Unable to access jarfile", vérifiez le chemin du fichier .jar
 
-**Mac :**
+**🍎 Mac :**
 
 Même commande en adaptant les chemins :
 
@@ -331,8 +344,8 @@ Même commande en adaptant les chemins :
 ### Étape 5.1 : Créer la structure du projet
 
 1. Sur votre ordinateur, créez un dossier pour vos projets XML :
-   - Windows : `C:\MesProjets\ProjetXML1`
-   - Mac : `/Users/votrenom/MesProjets/ProjetXML1`
+   - 🪟 Windows : `C:\MesProjets\ProjetXML1`
+   - 🍎 Mac : `/Users/votrenom/MesProjets/ProjetXML1`
 
 2. Dans VSCode, cliquez sur **"Fichier"** → **"Ouvrir le dossier..."**
 3. Naviguez jusqu'à votre dossier `ProjetXML1`
@@ -368,7 +381,7 @@ Le fichier s'ouvre dans l'éditeur (au centre).
 
 5. **Copiez-collez** ce contenu COMPLET (en ADAPTANT les chemins selon votre installation) :
 
-**Pour Windows :**
+**🪟 Pour Windows :**
 ```json
 {
   "java.home": "C:/Outils/jdk17",
@@ -376,7 +389,7 @@ Le fichier s'ouvre dans l'éditeur (au centre).
 }
 ```
 
-**Pour Mac :**
+**🍎 Pour Mac :**
 ```json
 {
   "java.home": "/Users/votrenom/Outils/jdk17",
@@ -397,13 +410,13 @@ Le fichier s'ouvre dans l'éditeur (au centre).
 
 ---
 
-### ⚠️ Configuration spéciale pour disques externes/portables avec WINDOWS
+### ⚠️ Configuration spéciale pour disques externes/portables avec 🪟 WINDOWS
 
 **Si votre projet ou VSCode est sur un disque externe (D:, E:, G:, clé USB, SSD portable) :**
 
 Il pourrait (ou pas !) y avoir des problèmes de permissions avec PowerShell. Ajoutez cette configuration au début de votre `settings.json` :
 
-**Pour Windows avec disque externe :**
+**🪟 Pour Windows avec disque externe :**
 ```json
 {
   "terminal.integrated.profiles.windows": {
@@ -837,8 +850,8 @@ Terminal will be reused by tasks, press any key to close it.
    - Testez le chemin dans l'explorateur Windows
 
 2. **Utilisez le chemin absolu complet :**
-   - Windows : `C:/Outils/jdk17/bin/java.exe`
-   - Mac : `/Users/votrenom/Outils/jdk17/bin/java`
+   - 🪟 Windows : `C:/Outils/jdk17/bin/java.exe`
+   - 🍎 Mac : `/Users/votrenom/Outils/jdk17/bin/java`
 
 3. **Vérifiez les slashes :**
    - ✅ Correct : `C:/Outils/jdk17/bin/java.exe`
@@ -850,7 +863,7 @@ Terminal will be reused by tasks, press any key to close it.
 
 **Symptôme :**
 ```
-Error: Unable to access jarfile C:/Outils/saxon-he-12.5.jar
+Error: Unable to access jarfile C:/Outils/saxon-he-12.9.jar
 ```
 
 **Solutions :**
@@ -858,15 +871,15 @@ Error: Unable to access jarfile C:/Outils/saxon-he-12.5.jar
 1. Vérifiez que le fichier `.jar` existe bien :
    - Ouvrez l'explorateur Windows
    - Allez dans `C:\Outils`
-   - Vous devez voir le fichier `saxon-he-12.5.jar`
+   - Vous devez voir le fichier `saxon-he-12.9.jar`
 
 2. Vérifiez le chemin dans `settings.json` :
    - Le nom du fichier doit correspondre exactement
-   - `saxon-he-12.5.jar` (pas `saxon-he-12-5.jar`)
+   - `saxon-he-12.9.jar` (pas `saxon-he-12-9.jar`)
 
 3. Vérifiez les guillemets :
-   - ✅ `"XSLT.tasks.saxonJar": "C:/Outils/saxon-he-12.5.jar"`
-   - ❌ `'XSLT.tasks.saxonJar': 'C:/Outils/saxon-he-12.5.jar'`
+   - ✅ `"XSLT.tasks.saxonJar": "C:/Outils/saxon-he-12.9.jar"`
+   - ❌ `'XSLT.tasks.saxonJar': 'C:/Outils/saxon-he-12.9.jar'`
 
 ---
 
@@ -977,6 +990,47 @@ Error: Unable to access jarfile C:/Outils/saxon-he-12.5.jar
    - Si vous utilisez des fonctions XSLT 2.0+, vérifiez la version
 
 ---
+---
+
+### Problème 8 : "Échec du lancement du processus de terminal"
+
+**Symptôme :** 🪟 Windows uniquement
+```
+Échec du lancement du processus de terminal : A native exception occurred during launch (Cannot create process, error code: 740)
+```
+
+**Cause :** Ce problème survient principalement quand VSCode ou votre projet est sur un **disque externe** (D:, E:, G:, clé USB, SSD portable).
+
+**Solutions :**
+
+1. **Lancer VSCode en administrateur (solution immédiate) :**
+   - Fermez VSCode
+   - Clic droit sur l'icône VSCode → "Exécuter en tant qu'administrateur"
+   - Rouvrez votre projet
+
+2. **Configurer le lancement automatique en admin (recommandé) :**
+   - Clic droit sur le raccourci VSCode → Propriétés
+   - Onglet "Compatibilité"
+   - Cochez "Exécuter ce programme en tant qu'administrateur"
+   - OK
+   - VSCode se lancera toujours en admin
+
+3. **Vérifier la configuration PowerShell :**
+   - Ouvrez `.vscode/settings.json`
+   - Vérifiez que vous avez bien la configuration PowerShell (voir Étape 5.3 - Configuration spéciale pour disques externes)
+
+4. **Alternative - Utiliser Command Prompt :**
+   Si PowerShell pose toujours problème, dans `settings.json` :
+```json
+   {
+     "terminal.integrated.defaultProfile.windows": "Command Prompt",
+     
+     "java.home": "G:/Outils/jdk17",
+     "saxon.jar.path": "G:/Outils/saxon-he-12.9.jar"
+   }
+```
+
+> **💡 Astuce :** Si vous travaillez toujours avec un SSD portable, configurez définitivement le mode administrateur. C'est la solution la plus stable.
 
 ## Annexes
 
@@ -1098,7 +1152,7 @@ Vous êtes prêt(e) à travailler avec XML/XSLT/XPath de manière professionnell
 
 ---
 
-## 📞 Besoin d'aide ?
+## 💡 Besoin d'aide ?
 
 **En cas de problème :**
 
@@ -1116,4 +1170,4 @@ Vous êtes prêt(e) à travailler avec XML/XSLT/XPath de manière professionnell
 ---
 
 *Guide créé pour les étudiants en information-documentation*  
-*Version 1.0 - Janvier 2026*
+*Version 1.1 - Janvier 2026*
