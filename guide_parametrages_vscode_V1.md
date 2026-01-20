@@ -195,7 +195,7 @@ VSCode s'ouvre. Vous voyez :
 5. Cliquez sur **"Extraire"**
 6. Un dossier se crée avec un sous-dossier `zulu17.xx.xx-ca-jdk17.x.x-win_x64`
 
-> **💡 Astuce :** Notez bien le chemin complet. Vous en aurez besoin plus tard !
+> **💡 Astuce :** ⚠️ Notez bien le chemin complet. Vous en aurez besoin plus tard !
 
 **Pour simplifier, renommez le dossier :**
 - Avant : `C:\Outils\zulu17.52.17-ca-jdk17.0.12-win_x64`
@@ -298,7 +298,7 @@ OpenJDK Runtime Environment Zulu...
 > - 🪟 Windows : `C:\Outils\SaxonHE12-9J\saxon-he-12.9.jar`
 > - 🍎 Mac : `/Users/votrenom/Outils/SaxonHE12-9J/saxon-he-12.9.jar`
 >
-> Dans ce cas, utilisez le chemin complet dans `settings.json` :
+> ⚠️ Dans ce cas, utilisez le chemin complet dans `settings.json` :
 > ```json
 > "saxon.jar.path": "C:/Outils/SaxonHE12-9J/saxon-he-12.9.jar"
 > ```
